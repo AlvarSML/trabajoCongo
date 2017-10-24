@@ -1,3 +1,4 @@
+let pac = [];
 let hosp = [];
 let enfs = [];
 
@@ -17,6 +18,10 @@ function nHospital() {
 }
 
 function nPaciente() {
-  //crear paciente
-  //devuelve objeto paciente
+  let nom = prompt("Nombre: ");
+  let edad = prompt("Edad: ");
+  let enfermedad;
+  let personal;
+
+  np = new Paciente(nom,edad,enfermedad,personal);
 }
