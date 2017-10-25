@@ -12,31 +12,31 @@ class Hospital{
     //Creamos los Get y Set
     
     //Set y Get de Nombre
-    function setNombre(nombre){
+    setNombre(nombre){
         this.nombre = nombre;
     }
     
-    function getNombre(){
+    getNombre(){
         return this.nombre;
     }
     
     //Set y Get de Localidad
     
-    function setLocalidad(localidad){
+    setLocalidad(localidad){
         this.localidad = localidad;
     }
     
-    function getLocalidad(){
+    getLocalidad(){
         return this.localidad;
     }
     
     //Set y Get de responsable
     
-    function setResponsable(responsable){
+    setResponsable(responsable){
         this.responsable = responsable
     }
     
-    function getResponsable(){
+    getResponsable(){
         return this.responsable;
     }
     
