@@ -1,6 +1,6 @@
 function Personal() {
     //constructor de la clase Personal  id,nombre, especialidad, puesto
-    this.constructor=function(){
+    constructor=function(){
         this.id = id; 
         this.nombre = nombre;
         this.especialidad = especialidad;
