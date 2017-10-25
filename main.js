@@ -25,3 +25,7 @@ function nPaciente() {
 
   np = new Paciente(nom,edad,enfermedad,personal);
 }
+
+function nPacientes(){
+  document.getElementById('np').value = pac.length()
+}
