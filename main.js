@@ -25,11 +25,11 @@ function nHospital() {
 function verHospitales(){
     let whosp = window.open(hospitales.html);
     let cont = "<p>";
-    
+
     for (let i = 0; i < hosp.length; i++){
         cont += ("<p>" + hosp[i].nombre + "</p>");
     }
-    
+
     cont += "<p>";
     whosp.document.getElementById('hosp').innerHTML = cont;
 }
@@ -38,11 +38,12 @@ function nPaciente() {
   //obtencion de datos
   let nom = prompt("Nombre: ");
   let edad = prompt("Edad: ");
+  let hosp = prompt("Hospital: ");
   let enfermedad;
   let personal;
 
   //creacion del objeto
-  np = new Paciente(nom,edad,enfermedad,personal);
+  np = new Paciente(nom,edad,enfermedad,personal,hosp);
   pac.push(np);
 
   //actualizacion de la interfaz
@@ -54,15 +55,14 @@ function actualizarPac(){
 }
 
 function verPacientes(){
-  //WIP
-  let cont = "<p>";
+  let cadPacientes = "<p>";
 
   for (let i = 0; i < pac.length; i++) {
-    cont += ("<p>paciente Nº "+i+"</p>");
-    cont += ("<p>nombre :" + pac[i].nombre + "</p> <p>edad:" + pac[i].edad +" </p><br/>");
+    cadPacientes += ("<p>paciente Nº "+i+"</p>");
+    cadPacientes += ("<p>nombre :" + pac[i].nombre + "</p> <p>edad:" + pac[i].edad +" </p><br/>");
   }
 
-  cont += "</p>";
+  cadPacientes += "</p>";
 
   document.getElementById('out').innerHTML = cont;
 }
