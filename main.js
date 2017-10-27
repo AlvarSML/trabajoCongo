@@ -54,15 +54,18 @@ function actualizarPac(){
 }
 
 function verPacientes(){
-  //WI^P
-  let wpac = window.open("pacientes.html");
+  //WIP
   let cont = "<p>";
 
   for (let i = 0; i < pac.length; i++) {
-    cont += ("<p>" + pac[i].nombre + "</p>");
-
+    cont += ("<p>paciente Nº "+i+"</p>");
+    cont += ("<p>nombre :" + pac[i].nombre + "</p> <p>edad:" + pac[i].edad +" </p><br/>");
   }
 
   cont += "</p>";
-  wpac.document.getElementById('pacs').innerHTML = cont;
+
+  document.getElementById('out').innerHTML = cont;
 }
+
+/*al abrirse la pagina*/
+  document.getElementById('np').value = 0;
