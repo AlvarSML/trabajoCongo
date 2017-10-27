@@ -13,25 +13,34 @@ function nEnfermedad() {
 }
 
 function nHospital() {
-    let nom = "Salve"
-    let localidad = "Laredo"
-    let responsable = "David Broncano"
+    let nom = prompt("Nombre: ");
+    let localidad = prompt("Localidad: ");
+    let responsable = prompt ("Responsable: ");
+    
   //añade objeto hospital
     nh = new Hospital(nom, localidad, responsable);
     hosp.push(nh);
+    
+    actualizarHosp();
+}
+
+function actualizarHosp(){
+    //Aumentar el contado de hospitales
+     document.getElementById('nh').value = hosp.length;
+    //Poner por defecto el primer hospital ingresado
+     document.getElementById('h').value = hosp[0].getNombre();
 }
 
 
 function verHospitales(){
-    let whosp = window.open(hospitales.html);
     let cont = "<p>";
 
     for (let i = 0; i < hosp.length; i++){
-        cont += ("<p>" + hosp[i].nombre + "</p>");
+        cont += ("<p>Nombre: " + hosp[i].nombre + "</p> <p>Localidad: " + hosp[i].localidad +" </p> <p>Responsable: " + hosp[i].responsable +" </p><br/>");
     }
 
     cont += "<p>";
-    whosp.document.getElementById('hosp').innerHTML = cont;
+    document.getElementById('out').innerHTML = cont;
 }
 
 function nPaciente() {
@@ -68,4 +77,8 @@ function verPacientes(){
 }
 
 /*al abrirse la pagina*/
+
+  
   document.getElementById('np').value = 0;
+  document.getElementById('nh').value = 0;
+  

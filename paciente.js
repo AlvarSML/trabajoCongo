@@ -1,11 +1,11 @@
 class Paciente {
-  constructor(nom,edad,enf,per){
+  constructor(nom,edad,enf,per,hosp){
     this.nombre = nom;
     this.edad = edad;
     this.enfermedad = enf;
     this.personal = per;
     this.entrada = new Date();
-    this.hospital = [];
+    this.hospital = hosp;
     this.salida;
   }
 
