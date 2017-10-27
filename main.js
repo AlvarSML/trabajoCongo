@@ -13,8 +13,25 @@ function nEnfermedad() {
 }
 
 function nHospital() {
-  //crear hospital
+    let nom = "Salve"
+    let localidad = "Laredo"
+    let responsable = "David Broncano"
   //añade objeto hospital
+    nh = new Hospital(nom, localidad, responsable);
+    hosp.push(nh);
+}
+
+
+function verHospitales(){
+    let whosp = window.open(hospitales.html);
+    let cont = "<p>";
+    
+    for (let i = 0; i < hosp.length; i++){
+        cont += ("<p>" + hosp[i].nombre + "</p>");
+    }
+    
+    cont += "<p>";
+    whosp.document.getElementById('hosp').innerHTML = cont;
 }
 
 function nPaciente() {
