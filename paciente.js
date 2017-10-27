@@ -5,6 +5,7 @@ class Paciente {
     this.enfermedad = enf;
     this.personal = per;
     this.entrada = new Date();
+    this.hospital = [];
     this.salida;
   }
 

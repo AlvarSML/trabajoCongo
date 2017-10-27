@@ -1,8 +1,19 @@
 <html>
   <head>
+    <meta charset="utf-8">
+
     <script src="paciente.js"></script>
+    <script src="enfermedad.js"></script>
+    <script src="Hospital.js"></script>
+    <script src="personal.js"></script>
+    <script src="main.js"></script>
   </head>
   <body>
-    <button>bot1</button>
+    <h1>Hospital</h1><h1 id = "nhospital"></h1>
+    <button value="edit" onclick="">Editar Hospital</button>
+    <button value="edit" onclick="verPacientes()">Ver pacientes</button>
+    <button value="edit" onclick="">Ver enfermedades</button>
+    <button value="edit" onclick="nPaciente()">Nuevo paciente</button>
+    <p>Numero de pacientes:<input type="text" id="np" value="" disabled=""></p>
   </body>
 </html>
