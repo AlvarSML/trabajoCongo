@@ -1,6 +1,6 @@
 class enfermedad{
 
-	//constructor de enfermedad, entran el nombre de la enfermedad y los sintomas
+	//constructor de enfermedad, entran el nombre de la enfermedad y los sintoma
 	constructor(nombre, sintomas){
 
 		this.nombre=nombre;
@@ -43,5 +43,5 @@ class enfermedad{
 
 	//visualizacion
 
-	
+
 }
