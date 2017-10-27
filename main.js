@@ -16,11 +16,11 @@ function nHospital() {
     let nom = prompt("Nombre: ");
     let localidad = prompt("Localidad: ");
     let responsable = prompt ("Responsable: ");
-    
+
   //añade objeto hospital
     nh = new Hospital(nom, localidad, responsable);
     hosp.push(nh);
-    
+
     actualizarHosp();
 }
 
@@ -73,12 +73,11 @@ function verPacientes(){
 
   cadPacientes += "</p>";
 
-  document.getElementById('out').innerHTML = cont;
+  document.getElementById('out').innerHTML = cadPacientes;
 }
 
 /*al abrirse la pagina*/
 
-  
+
   document.getElementById('np').value = 0;
   document.getElementById('nh').value = 0;
-  
