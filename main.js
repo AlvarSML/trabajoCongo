@@ -13,6 +13,7 @@ function nEnfermedad() {
 }
 
 function nHospital() {
+    //Obtencion de datos
     let nom = prompt("Nombre: ");
     let localidad = prompt("Localidad: ");
     let responsable = prompt ("Responsable: ");
@@ -24,23 +25,38 @@ function nHospital() {
     actualizarHosp();
 }
 
+function modHospitales() {
+    let j = prompt("¿Que hospital quiere modificar? (Introduzca el numero del hospital)");
+    
+    let nom = prompt("Nombre: ");
+    let localidad = prompt("Localidad: ");
+    let responsable = prompt ("Responsable: ");
+    
+    hosp[j].setNombre(nom);
+    hosp[j].setLocalidad(localidad);
+    hosp[j].setResponsable(responsable);
+    
+}
+
 function actualizarHosp(){
     //Aumentar el contado de hospitales
      document.getElementById('nh').value = hosp.length;
+    
     //Poner por defecto el primer hospital ingresado
      document.getElementById('h').value = hosp[0].getNombre();
 }
 
 
 function verHospitales(){
-    let cont = "<p>";
+    let cadHospitales = "<p>";
 
     for (let i = 0; i < hosp.length; i++){
-        cont += ("<p>Nombre: " + hosp[i].nombre + "</p> <p>Localidad: " + hosp[i].localidad +" </p> <p>Responsable: " + hosp[i].responsable +" </p><br/>");
+        cadHospitales += ("<p>Hospital Nº "+i+"</p>");
+        cadHospitales += ("<p>Nombre: " + hosp[i].nombre + "</p> <p>Localidad: " + hosp[i].localidad +" </p> <p>Responsable: " + hosp[i].responsable +" </p><br/>");
     }
 
-    cont += "<p>";
-    document.getElementById('out').innerHTML = cont;
+    cadHospitales += "<p>";
+    document.getElementById('out').innerHTML = cadHospitales;
 }
 
 function nPaciente() {
@@ -67,8 +83,8 @@ function verPacientes(){
   let cadPacientes = "<p>";
 
   for (let i = 0; i < pac.length; i++) {
-    cadPacientes += ("<p>paciente Nº "+i+"</p>");
-    cadPacientes += ("<p>nombre :" + pac[i].nombre + "</p> <p>edad:" + pac[i].edad +" </p><br/>");
+    cadPacientes += ("<p>Paciente Nº "+i+"</p>");
+    cadPacientes += ("<p>Nombre :" + pac[i].nombre + "</p> <p>Edad:" + pac[i].edad +" </p><br/>");
   }
 
   cadPacientes += "</p>";
