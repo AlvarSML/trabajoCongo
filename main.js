@@ -38,6 +38,12 @@ function modHospitales() {
     
 }
 
+function borrHospital(){
+    let p = prompt("Que hospital desea borrar (Introduzca el numero del hospital)");
+    hosp.splice(p);
+    
+}
+
 function actualizarHosp(){
     //Aumentar el contado de hospitales
      document.getElementById('nh').value = hosp.length;
