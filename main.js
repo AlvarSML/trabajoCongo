@@ -16,7 +16,7 @@ function nEmpleado() {
     actualizarEmpl();
     
 }
-function editEmpleados() {
+function editEmpleado() {
     let z = prompt("¿Que Empleado quiere modificar? (Introduzca el ID del empleado)");
     
     let id = prompt ("Id: ")
@@ -53,7 +53,7 @@ function verEmpleados(){
     }
 
     cadEmpleados += "<p>";
-    document.getElementById('out').innerHTML = mosEmpleados;
+    document.getElementById('out').innerHTML = cadEmpleados;
 }
 
 
