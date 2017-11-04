@@ -1,11 +1,61 @@
 let pac = [];
 let hosp = [];
-let enfs = [];
+let empl = [];
 
 function nEmpleado() {
-  //crear empleado
-  //añade objeto empleado
+ //Obtencion de datos
+    let id = prompt ("Id: ")
+    let nombre = prompt("Nombre: ");
+    let especialidad = prompt("Especialidad: ");
+    let puesto = prompt ("Puesto: ");
+
+  //añade objeto hospital
+    nem = new Personal(id ,nom, especialidad, puesto);
+    hosp.push(nem);
+  // actualizamos el array
+    actualizarEmpl();
+    
 }
+function editEmpleados() {
+    let z = prompt("¿Que Empleado quiere modificar? (Introduzca el ID del empleado)");
+    
+    let id = prompt ("Id: ")
+    let nombre = prompt("Nombre: ");
+    let especialidad = prompt("Especialidad: ");
+    let puesto = prompt ("Puesto: ");
+    
+    nem[z].setID(id);
+    nem[z].setNombre(nombre);
+    nem[z].setEspecialidad(especialidad);
+    nem[z].setPuesto(puesto);
+    
+}
+
+function delEmpleado(){
+    let b = prompt("Que Empleado desea borrar (Introduzca el ID del empleado)");
+    empl.splice(b);
+    
+}
+
+function actualizarEmpl(){
+    //Aumentar los empleados
+     document.getElementById('idempl').value = empl.length;
+}
+    
+
+
+function verEmpleados(){
+    let cadEmpleados = "<p>";
+
+    for (let i = 0; i < empl.length; i++){
+        cadEmpleados += ("<p>Empleado Nº "+i+"</p>");
+        cadEmpleados += ("<p>ID: " + empl[i].id + "</p> <p>Nombre: " + empl[i].nombre + "</p> <p>Especialidad: " + empl[i].especialidad +" </p> <p>Puesto: " + empl[i].puesto +" </p><br/>");
+    }
+
+    cadEmpleados += "<p>";
+    document.getElementById('out').innerHTML = mosEmpleados;
+}
+
 
 function nEnfermedad() {
   //crear enfermedad
