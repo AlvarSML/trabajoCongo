@@ -1,6 +1,7 @@
 let pac = [];
 let hosp = [];
 let empl = [];
+let enf = [];
 
 function nEmpleado() {
  //Obtencion de datos
@@ -59,7 +60,74 @@ function verEmpleados(){
 
 function nEnfermedad() {
   //crear enfermedad
+  let nom = prompt("Nombre de la enfermedad:");
+  let acum = 1;
+  let sintomas;
+  while (parseInt(acum) != 0){
+    acum = prompt("Introduzca un síntoma o el 0 si ha terminado añadiendo sintomas.");
+    if (parseInt(acum) != 0){
+      sintomas += acum;
+    }else{
+      alert("Ha terminado de añadir síntomas.");
+    }
+  }
+
   //añade objeto enfermedad
+  nen = new enfermedad(nom, sintomas);
+  enf.push(nen);
+}
+
+function actualizarEnf(){
+  document.getElementById('nen').value = hosp.length;
+}
+
+function listarEnfermedades(){
+  let cadEnfermedades = "<p>";
+  for (var i = 0; i < enf.length; i++) {
+    cadEnfermedades += ("<p>Enfermedad Nº "+i+"</p>");
+    cadEfnfermedades += ("<p>Nombre :" + enf[i].getNombre + "</p> <p>Sintomas:" + enf[i].getSintomas +" </p><br/>");
+  }
+
+  cadEnfermedades += "</p>";
+
+  document.getElementById('out').innerHTML = cadEnfermedades;
+  }
+
+}
+
+function borrarEnfermedad(){
+
+}
+
+function modEnfermedad(){
+  let nom = prompt("Introduzca el nombre de la enfermedad a modificar.");
+  for (var i = 0; i < enf.length; i++) {//ver donde se guarda enfermedad y sustituir en things
+    if (enf[i].getNombre() == nom){
+      let opcion = prompt("enfermedad encontrada. Si desea modificar el nombre pulse 1, si desea  añadir mas sintomas pulse 2, para salir cualquier otra tecla.");
+
+      switch(opcion){
+        case 1: 
+          let nnom = prompt("Introduzca el nuevo nombre que quiere darle a la enfermedad.");
+          enf[i].setNombre(nnom);
+          break;
+
+        case 2:
+
+          let sintoma = prompt("Introduzca el nuevo sintoma que quiere añadir.");
+          enf[i].setSintomas( enf[i].getSintomas + sintoma);
+          break;
+
+
+
+        default:
+
+          break;
+      }
+
+    }else{
+      alert("enfermedad no encontrada");
+    }
+  }
 }
 
 function nHospital() {
